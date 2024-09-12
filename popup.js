@@ -23,7 +23,7 @@ function removePosts() {
 		listItems.forEach(function(listItem) {
 			let nestedAnchor = listItem.querySelector('span.long-username a');
 			let trimmed = nestedAnchor.textContent.trim();
-			if (nestedAnchor && (trimmed === "Lisa Hall" || trimmed === "Rachael Kaci" || trimmed === "Rossana Castillo" || trimmed === "Megan Garcia" || trimmed === "Curtis Johansen" || trimmed === "Kristy Blackburn" || trimmed === "Wendy Stratton" || trimmed === "Nicole Menache" || trimmed == "Mycal Hixon")) {
+			if (nestedAnchor && (trimmed === "Lisa Hall" || trimmed === "Rachael Kaci" || trimmed === "Rossana Castillo" || trimmed === "Megan Garcia" || trimmed === "Curtis Johansen" || trimmed === "Kristy Blackburn" || trimmed === "Wendy Stratton" || trimmed === "Nicole Menache" || trimmed == "Mycal Hixon") || trimmed == "Kat Catalano") {
 				console.log("Match found. Removing list item.");
 				listItem.remove(); 
 			}
