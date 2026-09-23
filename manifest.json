@@ -1,11 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Schoology Simple",
-  "description": "Extention to remove unnecessary posts in recent activity",
-  "version": "1.0.0",
-  "permissions": ["activeTab", "scripting"],
-	"action": {
-		"default_popup": "popup.html",
-		"default_title": "Simple"
-	}
+  "description": "Automatically removes posts from selected people in Schoology's Recent Activity feed.",
+  "version": "1.1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.schoology.com/*"],
+      "js": ["content.js"]
+    }
+  ]
 }
